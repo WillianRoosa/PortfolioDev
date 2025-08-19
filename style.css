@@ -242,7 +242,7 @@ section.especialidades .flex {
 .especialidades .box-especialidades h3 {
     margin: 15px 0;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 45px;
     text-align: center;
     color: #4ade80;
 }
@@ -261,7 +261,7 @@ section.especialidades .flex {
 
 .especialidade_card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
+    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.2);
 }
 
 .especialidade_card h3 {
