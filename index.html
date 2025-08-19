@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Willian Rosa - Developer</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="Logo portfólio">
+                </a>
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Especialidades</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Experiência</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-lang-switch">
+                <input type="radio" name="language" id="lang-pt" checked onclick="setLanguage('pt-br')">
+                <label for="lang-pt" class="lang-label">🇧🇷</label>
+
+                <input type="radio" name="language" id="lang-en" onclick="setLanguage('en')">
+                <label for="lang-en" class="lang-label">🇬🇧</label>
+
+                <div class="switch-slider"></div><!--switch-slider-->
+            </div><!--btn-lang-switch-->
+        </div> <!--interface-->
+    </header>
+
+    <main>
+        <section class="tela-inicial">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-tela-inicial" style="transition-delay: 100ms;">
+                        <h1>Olá, meu nome é</h1>
+
+                        <h2><span>Willian Rosa</span>,</h2>
+
+                        <h3>Este é meu portfólio!</h3>
+
+                        <p>Desenvolvedor Backend Júnior com 1 ano de experiência em Java e Spring Boot, dedicado à
+                            construção de aplicações modernas, escaláveis e de alta performance. Apaixonado por boas
+                            práticas de programação, integração de APIs REST e uso eficiente de bancos de dados como
+                            MySQL. Reconhecido pela minha capacidade de aprender rapidamente, adaptabilidade e
+                            espírito colaborativo, busco constantemente evoluir para entregar soluções de qualidade que
+                            façam a diferença.</p>
+
+                        <a href="https://www.linkedin.com/in/willian-rosa-0500b6238/" class="linkedin" target="_blank"
+                            rel="noreferrer"><button>Entre em contato</button>
+                        </a>
+                    </div><!--txt-tela-inicial-->
+
+                    <div class="img-tela-inicial">
+                        <img src="images/willian1.jpeg" alt="Willian 1">
+                    </div><!--img-tela-incial-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--tela-inicial-->
+
+        <section class="especialidades">
+            <div class="interface">
+                <h2 class="titulo-padrao">MINHAS <Span>ESPECIALIDADES.</Span></h2>
+                <div class="flex">
+                    <div class="box-especialidades">
+                        <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
+                            <img src="icons/java.svg" alt="Java" width="60">
+                            <h3>Java</h3>
+                            <p>Experiência no desenvolvimento de aplicações robustas e orientadas a objetos, aplicando
+                                boas
+                                práticas de programação e princípios de arquitetura limpa.
+                            </p>
+                        </div>
+                    </div><!--box-especialidades-->
+
+                    <div class="box-especialidades">
+                        <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
+                            <img src="icons/spring.svg" alt="Spring" width="60">
+                            <h3>Spring Boot</h3>
+                            <p>Experiência no desenvolvimento de aplicações robustas e orientadas a objetos, aplicando
+                                boas
+                                práticas de programação e princípios de arquitetura limpa.
+                            </p>
+                        </div>
+                    </div><!--box-especialidades-->
+
+                    <div class="box-especialidades">
+                        <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
+                            <img src="icons/aws.svg" alt="Aws" width="60">
+                            <h3>AWS</h3>
+                            <p>Experiência no desenvolvimento de aplicações robustas e orientadas a objetos, aplicando
+                                boas
+                                práticas de programação e princípios de arquitetura limpa.
+                            </p>
+                        </div>
+                    </div><!--box-especialidades-->
+
+                    <div class="box-especialidades">
+                        <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
+                            <img src="icons/mysql.svg" alt="MySQL" width="60">
+                            <h3>MySQL</h3>
+                            <p>Experiência no desenvolvimento de aplicações robustas e orientadas a objetos, aplicando
+                                boas
+                                práticas de programação e princípios de arquitetura limpa.
+                            </p>
+                        </div>
+                    </div><!--box-especialidades-->
+
+                    <div class="box-especialidades">
+                        <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
+                            <img src="icons/javascript.svg" alt="JS" width="60">
+                            <h3>JavaScript</h3>
+                            <p>Experiência no desenvolvimento de aplicações robustas e orientadas a objetos, aplicando
+                                boas
+                                práticas de programação e princípios de arquitetura limpa.
+                            </p>
+                        </div>
+                    </div><!--box-especialidades-->
+
+                    <div class="box-especialidades">
+                        <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
+                            <img src="icons/github.svg" alt="Git" width="60">
+                            <h3>GitHub</h3>
+                            <p>Experiência no desenvolvimento de aplicações robustas e orientadas a objetos, aplicando
+                                boas
+                                práticas de programação e princípios de arquitetura limpa.
+                            </p>
+                        </div>
+                    </div><!--box-especialidades-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--especialidades-->
+    </main>
+</body>
+
+</html>
