@@ -29,10 +29,31 @@ h2.titulo-padrao {
     color: #e6edf3;
     font-size: 38px;
     text-align: center;
+    font-style: oblique;
 }
 
 h2.titulo-padrao span {
     color: #4ade80;
+    font-style: italic;
+}
+
+.tags {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background-color: #161b22;
+    color: #4ade80;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    font-style: italic;
+    text-align: justify;
+    filter: brightness(1.05) contrast(1.1);
+    box-shadow: 0 4px 4px rgba(74, 222, 128, 0.2);
 }
 
 /* HEADER */
@@ -86,6 +107,15 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     padding: 0 40px;
+}
+
+header .logo a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .logo a:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05) contrast(1.1);
 }
 
 /* Language Switch (Troca de idioma) */
@@ -154,7 +184,7 @@ section.tela-inicial .flex {
 section.tela-inicial .txt-tela-inicial button {
     padding: 10px 40px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     background-color: #4ade80;
     border: 0;
     border-radius: 30px;
@@ -182,6 +212,7 @@ section.tela-inicial .txt-tela-inicial button:hover {
 .tela-inicial .txt-tela-inicial h2 span {
     color: #e6edf3;
     font-size: 40px;
+    font-style: oblique;
 }
 
 .tela-inicial .txt-tela-inicial h3 {
@@ -199,14 +230,14 @@ section.tela-inicial .txt-tela-inicial button:hover {
     max-width: 350px;
     border-radius: 50%;
     border: 3px solid #4ade80;
-    transition: all 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
     box-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
+    filter: brightness(1.05) contrast(1.1);
 }
 
 .tela-inicial .img-tela-inicial img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(74, 222, 128, 0.7),
-        0 0 50px rgba(74, 222, 128, 0.4);
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
 }
 
 /* ESPECIALIDADES */
@@ -233,6 +264,8 @@ section.especialidades .flex {
 .especialidades .box-especialidades img {
     display: block;
     margin: 0 auto;
+    padding: 10px 0;
+    filter: brightness(1.05) contrast(1.1);
 }
 
 .especialidades .box-especialidades img:hover {
@@ -240,11 +273,9 @@ section.especialidades .flex {
 }
 
 .especialidades .box-especialidades h3 {
-    margin: 15px 0;
-    margin-bottom: 20px;
-    margin-top: 45px;
     text-align: center;
     color: #4ade80;
+    padding: 10px 0;
 }
 
 .especialidades .box-especialidades p {
@@ -253,6 +284,7 @@ section.especialidades .flex {
 }
 
 .especialidade_card {
+    align-items: stretch;
     background-color: #161b22;
     padding: 1.5rem;
     border-radius: 10px;
@@ -261,16 +293,196 @@ section.especialidades .flex {
 
 .especialidade_card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.2);
+    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.326);
 }
 
-.especialidade_card h3 {
+/* SOBRE */
+
+section.sobre {
+    padding: 70px 4%;
+}
+
+section.sobre h2.titulo-padrao {
+    margin-bottom: 50px;
+}
+
+section.sobre .img-sobre img {
+    width: 300px;
+    height: 450px;
+    border: 3px solid #4ade80;
+    border-radius: 12%;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    filter: brightness(1.05) contrast(1.1);
+}
+
+section.sobre .img-sobre img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    color: #e6edf3;
+    font-style: oblique;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #4ade80;
+    display: block;
+    font-style: italic;
+}
+
+.sobre .txt-sobre p {
+    margin: 15px 0;
+    text-align: justify;
+    color: #9da5b4;
+    font-style: italic;
+}
+
+.sobre .txt-sobre h4 {
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: justify;
+    align-items: center;
+    color: #4ade80;
+    font-style: italic;
+}
+
+.sobre .txt-sobre .btn-redes-sociais button {
+    background-color: #161b22;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    margin: 0 6px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    filter: brightness(1.05) contrast(1.1);
+}
+
+.sobre .txt-sobre .btn-redes-sociais button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 5px rgba(74, 222, 128, 0.485);
+}
+
+/* EXPERIÊNCIAS PROFISSIONAIS */
+
+section.experiencias {
+    padding: 70px 4%;
+}
+
+section.experiencias .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+    gap: 30px;
+    padding: 2.5rem;
+}
+
+.experiencias_card {
+    background-color: #161b22;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #4ade80;
+    transition: transform 0.3s ease, border-left 0.3s ease, box-shadow 0.9s ease;
+}
+
+.experiencias_card:hover {
+    transform: translateX(15px);
+    box-shadow: 0 12px 200px rgba(0, 0, 0, 0.3);
+    border-left: 9px solid #22c55e;
+    box-shadow: 8px 2px 20px rgba(74, 222, 128, 0.326);
+}
+
+.experiencias_card h3 {
+    font-style: italic;
     color: #4ade80;
     margin-bottom: 0.5rem;
 }
 
-.especialidade_card p {
+.experiencias_card strong {
+    line-height: 50px;
+    color: #e6edf3;
+    font-style: oblique;
+    margin-bottom: 0.5rem;
+}
+
+.experiencias_card p {
     color: #9da5b4;
+    margin-bottom: 0.5rem;
+}
+
+.experiencias_card ul li {
+    margin-bottom: 0.4rem;
+    margin-left: 1.5rem;
+    color: #9da5b4;
+    font-style: italic;
+}
+
+/* MEUS PROJETOS */
+
+section.projeto {
+    padding: 70px 4%;
+}
+
+section.projetos .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px;
+}
+
+.projetos a {
+    text-decoration: none;
+    flex: 1 1 calc(50% - 100px);
+    max-width: calc(50% - 100px);
+    transform: translateY(-20px);
+    border-radius: 20px;
+    box-shadow: 4px 5px 2px rgba(74, 222, 128, 0.2);
+    cursor: pointer;
+}
+
+.projetos_card {
+    min-height: 200px;
+    background-color: #161b22;
+    padding: 1.5rem;
+    border-radius: 20px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.projetos_card:hover {
+    transform: translateY(-8px);
+    box-shadow: 6px 8px 5px rgba(74, 222, 128, 0.2);
+}
+
+.projetos_card h3 {
+    font-style: italic;
+    color: #4ade80;
+    margin-bottom: 0.5rem;
+}
+
+.projetos_card strong {
+    font-style: oblique;
+    color: #e6edf3;
+    margin-bottom: 0.5rem;
+    line-height: 50px;
+}
+
+.projetos_card p {
+    font-style: italic;
+    color: #9da5b4;
+    text-align: justify;
+    margin-bottom: 0.5rem;
 }
 
 /* ANIMAÇÕES  */
