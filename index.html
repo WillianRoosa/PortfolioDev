@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo2.png" type="image/x-icon">
     <title>Willian Rosa - Developer</title>
@@ -25,16 +26,16 @@
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Especialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Experiência</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#" data-lang="nav_especialidades">Especialidades</a></li>
+                    <li><a href="#" data-lang="nav_sobre">Sobre</a></li>
+                    <li><a href="#" data-lang="nav_experiencia">Experiências</a></li>
+                    <li><a href="#" data-lang="nav_projetos">Projetos</a></li>
+                    <li><a href="#" data-lang="nav_contato">Contato</a></li>
                 </ul>
             </nav>
 
             <div class="btn-lang-switch">
-                <input type="radio" name="language" id="lang-pt" checked onclick="setLanguage('pt-br')">
+                <input type="radio" name="language" id="lang-pt" checked onclick="setLanguage('pt')">
                 <label for="lang-pt" class="lang-label">🇧🇷</label>
 
                 <input type="radio" name="language" id="lang-en" onclick="setLanguage('en')">
@@ -50,23 +51,29 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txt-tela-inicial" style="transition-delay: 100ms;">
-                        <h1>Olá, meu nome é</h1>
+                        <h1 data-lang="tela_intro">Olá, meu nome é</h1>
 
                         <h2><span>Willian Rosa</span>,</h2>
 
-                        <h3>Este é meu portfólio!</h3>
+                        <h3 data-lang="tela_portfolio">Este é meu portfólio!</h3>
 
-                        <p>Desenvolvedor Backend Júnior com 1 ano de experiência em Java e Spring Boot, dedicado à
+                        <p data-lang="tela_descricao">Desenvolvedor Backend Júnior com 1 ano de experiência em Java e
+                            Spring Boot, dedicado à
                             construção de aplicações modernas, escaláveis e de alta performance. Apaixonado por boas
-                            práticas de programação, integração de APIs REST e uso eficiente de bancos de dados como
+                            práticas de programação, integração de APIs REST e uso eficiente de banco de dados como
                             MySQL. Reconhecido pela minha capacidade de aprender rapidamente, adaptabilidade e
                             espírito colaborativo, busco constantemente evoluir para entregar soluções de qualidade que
                             façam a diferença.</p>
 
-                        <a href="https://wa.me/5512996438207?text=Ol%C3%A1%20Willian!%20Vi%20seu%20portf%C3%B3lio%20e%20fiquei%20muito%20interessado%20no%20seu%20trabalho.%20Gostaria%20de%20entrar%20em%20contato%20para%20conversar%20melhor."
-                            class="whatsapp" target="_blank" rel="noopener noreferrer"><button>Entre
-                                em contato!</button>
-                        </a>
+                        <button class="btn-padrao" data-lang="tela_contato"
+                            onclick="window.open('https://wa.me/5512996438207?text=Ol%C3%A1%20Willian!%20Vi%20seu%20portf%C3%B3lio%20e%20fiquei%20muito%20interessado%20no%20seu%20trabalho.%20Gostaria%20de%20entrar%20em%20contato%20para%20conversar%20melhor.','_blank', 'noopener noreferrer')">Entre
+                            em contato!
+                        </button>
+
+                        <button class="btn-padrao">
+                            <img src="icons/download.svg" alt="download">
+                            <span> CV</span>
+                        </button>
                     </div><!--txt-tela-inicial-->
 
                     <div class="img-tela-inicial">
@@ -78,13 +85,15 @@
 
         <section class="especialidades">
             <div class="interface">
-                <h2 class="titulo-padrao">MINHAS <Span>ESPECIALIDADES.</Span></h2>
+                <h2 class="titulo-padrao" data-lang="especialidades_titulo">MINHAS <span
+                        data-lang="especialidades_titulo1">ESPECIALIDADES.</span></h2>
                 <div class="flex">
                     <div class="box-especialidades">
                         <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
                             <img src="icons/java.svg" alt="Java" width="60">
                             <h3>Java</h3>
-                            <p>Desenvolvo aplicações backend com Java, robustas e orientadas a objetos,
+                            <p data-lang="especialidades_java">Desenvolvo aplicações backend com Java, robustas e
+                                orientadas a objetos,
                                 aplicando princípios de SOLID, Collections API, tratamento de exceções e boas práticas
                                 de arquitetura para sistemas escaláveis.
                             </p>
@@ -95,7 +104,8 @@
                         <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
                             <img src="icons/spring.svg" alt="Spring" width="60">
                             <h3>Spring Boot</h3>
-                            <p>Utilizo o Spring Boot para construir APIs REST escaláveis e seguras, microsserviços,
+                            <p data-lang="especialidades_spring">Utilizo o Spring Boot para construir APIs REST
+                                escaláveis e seguras, microsserviços,
                                 utilizando JPA, Spring Security e integrando com bancos de
                                 dados, garantindo escalabilidade, segurança e manutenibilidade.
                             </p>
@@ -106,7 +116,8 @@
                         <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
                             <img src="icons/aws.svg" alt="Aws" width="60">
                             <h3>AWS</h3>
-                            <p>Conhecimento em serviços de nuvem para deploy, escalabilidade e monitoramento de
+                            <p data-lang="especialidades_AWS">Conhecimento em serviços de nuvem para deploy,
+                                escalabilidade e monitoramento de
                                 aplicações, com foco em boas práticas de cloud computing, com serviços da AWS como EC2,
                                 S3 e RDS.
                             </p>
@@ -117,7 +128,9 @@
                         <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
                             <img src="icons/mysql.svg" alt="MySQL" width="60">
                             <h3>MySQL</h3>
-                            <p>Modelagem e manipulação de dados em bancos relacionais, com foco em consultas otimizadas,
+                            <p data-lang="especialidades_sql">Modelagem e manipulação de dados em bancos relacionais,
+                                com
+                                foco em consultas otimizadas,
                                 normalização, integridade referencial e integração eficiente com aplicações backend em
                                 Java.
                             </p>
@@ -128,7 +141,8 @@
                         <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
                             <img src="icons/javascript.svg" alt="JS" width="60">
                             <h3>JavaScript</h3>
-                            <p>Criação de interfaces dinâmicas e responsivas para aplicações web, utilizando JavaScript
+                            <p data-lang="especialidades_js">Criação de interfaces dinâmicas e responsivas para
+                                aplicações web, utilizando JavaScript
                                 moderno (ES6+),
                                 consumo de APIs REST e aplicação de boas práticas de usabilidade e acessibilidade.
                             </p>
@@ -139,28 +153,33 @@
                         <div class="especialidade_card scroll-animation" data-animation="fadeInLeft">
                             <img src="icons/github.svg" alt="Git" width="60">
                             <h3>GitHub</h3>
-                            <p>Controle de versão e colaboração em projetos utilizando Git e GitHub, com foco em
+                            <p data-lang="especialidades_git">Controle de versão e colaboração em projetos utilizando
+                                Git
+                                e GitHub, com foco em
                                 organização de branches,
                                 pull requests, versionamento semântico e integração contínua para equipes ágeis.
                             </p>
                         </div><!--especialidade_card-->
                     </div><!--box-especialidades-->
+
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--especialidades-->
 
         <section class="sobre">
             <div class="interface">
-                <h2 class="titulo-padrao">QUEM <span>SOU.</span></h2>
+                <h2 class="titulo-padrao" data-lang="sobre_titulo">QUEM <span data-lang="sobre_titulo2">SOU.</span></h2>
                 <div class="flex">
                     <div class="img-sobre">
                         <img src="images/willian2.jpeg" alt="Willian 2">
                     </div><!--img-sobre-->
 
                     <div class="txt-sobre">
-                        <h2>PRAZER EM TE CONHECER,<span>ME CHAMO WILLIAN!</span></h2>
-                        <strong>Graduado em Gestão da Tecnologia da Informação</strong>
-                        <p>Meu nome é Willian Rosa, desenvolvedor backend com foco em Java e Spring Boot,
+                        <h2 data-lang="sobre_intro">PRAZER EM TE CONHECER,<span data-lang="sobre_intro2">ME CHAMO
+                                WILLIAN!</span></h2>
+                        <strong data-lang="sobre_faculdade">Graduado em Gestão da Tecnologia da Informação</strong>
+                        <p data-lang="sobre_p1">Meu nome é Willian Rosa, desenvolvedor backend com foco em Java e Spring
+                            Boot,
                             apaixonado
                             por criar soluções
                             robustas, escaláveis e seguras. Tenho experiência no desenvolvimento de APIs RESTful,
@@ -173,7 +192,8 @@
                             objetivo
                             de entregar sistemas de
                             alta qualidade e fácil manutenção.</p>
-                        <p>Sou movido pela evolução contínua e pela busca em aprender novas tecnologias. Tenho me
+                        <p data-lang="sobre_p2">Sou movido pela evolução contínua e pela busca em aprender novas
+                            tecnologias. Tenho me
                             dedicado
                             também a JavaScript para
                             aplicações web interativas e à integração eficiente entre backend e frontend, construindo
@@ -183,7 +203,7 @@
                             desenvolvimento de
                             projetos que gerem impacto real, unindo técnica, dedicação e inovação.
                         </p>
-                        <h4>Abaixo segue minhas redes sociais.</h4>
+                        <h4 data-lang="sobre_redes">Abaixo segue minhas redes sociais.</h4>
                         <div class="btn-redes-sociais">
                             <a href="https://github.com/WillianRoosa" target="_blank"
                                 rel="noopener noreferrer"><button><img src="icons/github.svg" alt="GitHub"
@@ -205,18 +225,24 @@
 
         <section class="experiencias">
             <div class="interface">
-                <h2 class="titulo-padrao"> EXPERIÊNCIAS <span>PROFISSIONAIS.</span></h2>
+                <h2 class="titulo-padrao" data-lang="experiencias_titulo"> EXPERIÊNCIAS <span
+                        data-lang="experiencias_titulo2">PROFISSIONAIS.</span></h2>
                 <div class="flex">
                     <div class="experiencias_card scroll-animation" data-animation="fadeSlideUp">
-                        <h3>Estágio de Desenvolvedor e Suporte Técnico</h3>
-                        <strong>Care - Business | Jun 2024 - Jan 2025 | Remoto</strong>
+                        <h3 data-lang="experiencias_intro">Estágio de Desenvolvedor e Suporte Técnico</h3>
+                        <strong data-lang="experiencias_empresa">Care - Business | Jun 2024 - Jan 2025 | Remoto</strong>
                         <ul>
-                            <li>Auxílio no desenvolvimento de tasks e melhorias, correção de bugs.</li>
-                            <li>Suporte técnico com clientes, visão analítica sobre melhorias no software .</li>
-                            <li>Contribuição nas sprints para melhorias e funcionamento no desempenho e validação do
+                            <li data-lang="experiencias_p1">Auxílio no desenvolvimento de tasks e melhorias, correção de
+                                bugs.</li>
+                            <li data-lang="experiencias_p2">Suporte técnico com clientes, visão analítica sobre
+                                melhorias no software.</li>
+                            <li data-lang="experiencias_p3">Contribuição nas sprints para melhorias e funcionamento no
+                                desempenho e validação do
                                 sistema ERP.</li>
-                            <li>Integração iPaaS, Microsoft Azure, ERP com IA, Validação de NF's e NFC.</li>
-                            <li>Alinhamento semanal de tasks no Asana e reuniões com clientes.</li>
+                            <li data-lang="experiencias_p4">Integração iPaaS, Microsoft Azure, ERP com IA, Validação de
+                                NF's e NFC.</li>
+                            <li data-lang="experiencias_p5">Alinhamento semanal de tasks no Asana e reuniões com
+                                clientes.</li>
                         </ul>
 
                         <div class="tags">
@@ -229,15 +255,22 @@
                     </div><!--experiencias_card-->
 
                     <div class="experiencias_card scroll-animation" data-animation="fadeSlideUp">
-                        <h3>Estágio de Suporte para Desenvolvimento de sistema ERP</h3>
-                        <strong>Ultra Seven Informática | Jan 2024 - Jun 2024 | Remoto</strong>
+                        <h3 data-lang="experiencias_intro2">Estágio de Suporte para Desenvolvimento de sistema ERP
+                        </h3>
+                        <strong data-lang="experiencias_empresa2">Ultra Seven Informática | Jan 2024 - Jun 2024 |
+                            Remoto</strong>
                         <ul>
-                            <li>Participação na correção de bugs e ajustes em funcionalidades existentes do ERP.</li>
-                            <li>Documentação de processos internos e fluxos do sistema para melhoria contínua.</li>
-                            <li>Colaboração e alinhamentos com a equipe de desenvolvedores na implementação de novas
+                            <li data-lang="experiencias_p6">Participação na correção de bugs e ajustes em
+                                funcionalidades existentes do ERP.</li>
+                            <li data-lang="experiencias_p7">Documentação de processos internos e fluxos do sistema para
+                                melhoria contínua.</li>
+                            <li data-lang="experiencias_p8">Colaboração e alinhamentos com a equipe de desenvolvedores
+                                na implementação de novas
                                 features.</li>
-                            <li>Realização de testes funcionais garantindo a qualidade das entregas.</li>
-                            <li>Apoio na integração de APIs externas e análise de desempenho do sistema.</li>
+                            <li data-lang="experiencias_p9">Realização de testes funcionais garantindo a qualidade das
+                                entregas.</li>
+                            <li data-lang="experiencias_p10">Apoio na integração de APIs externas e análise de
+                                desempenho do sistema.</li>
                         </ul>
 
                         <div class="tags">
@@ -247,19 +280,22 @@
                             <span>AWS Cloud</span>
                         </div><!--tags-->
                     </div><!--experiencias_card-->
+
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--experiencias_card-->
 
         <section class="projetos">
             <div class="interface">
-                <h2 class="titulo-padrao">MEUS <span>PROJETOS.</span></h2>
+                <h2 class="titulo-padrao" data-lang="projetos_titulo">MEUS <span
+                        data-lang="projetos_titulo2">PROJETOS.</span></h2>
                 <div class="flex">
                     <a href="https://github.com/WillianRoosa/SendingEmail" target="_blank" rel="noopener noreferrer">
                         <div class="projetos_card scroll-animation" data-animation="fadeInLeft">
-                            <h3>Projeto 1</h3>
-                            <strong>* API de envio de e-mail *</strong>
-                            <p>API desenvolvida com Java e Spring Boot, para disparos de e-mail via SMTP. com uso de
+                            <h3 data-lang="projetos1">Projeto 1</h3>
+                            <strong data-lang="projetos_name1">* API de envio de e-mail *</strong>
+                            <p data-lang="projetos_p1">API desenvolvida com Java e Spring Boot, para disparos de e-mail
+                                via SMTP. com uso de
                                 segurança de dados do e-mail e senha do SMTP.</p>
                             <div class="tags">
                                 <span>Java</span>
@@ -271,9 +307,10 @@
                     </a>
                     <a href="https://github.com/WillianRoosa/PortfolioDev" target="_blank" rel="noopener noreferrer">
                         <div class="projetos_card scroll-animation" data-animation="fadeInRight">
-                            <h3>Projeto 2</h3>
-                            <strong>* Desenvolvimento de portfólio *</strong>
-                            <p>Portfólio desenvolvido para divulgação dos meus trabalhos e evolução como desenvolvedor.
+                            <h3 data-lang="projetos2">Projeto 2</h3>
+                            <strong data-lang="projetos_name2">* Desenvolvimento de portfólio *</strong>
+                            <p data-lang="projetos_p2">Portfólio desenvolvido para divulgação dos meus trabalhos e
+                                evolução como desenvolvedor.
                                 Buscando mais espaço na área.
                             </p>
 
@@ -282,14 +319,15 @@
                                 <span>CSS 3</span>
                                 <span>JavaScript</span>
                             </div><!--tags-->
-                        </div>
+                        </div><!--projetos_card-->
                     </a>
-                    <a href="https://github.com/WillianRoosa/PortfolioDev" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/WillianRoosa/heroisVSviloes" target="_blank" rel="noopener noreferrer">
                         <div class="projetos_card scroll-animation" data-animation="fadeInRight">
-                            <h3>Projeto 3</h3>
-                            <strong>* Desenvolvimento de portfólio *</strong>
-                            <p>Portfólio desenvolvido para divulgação dos meus trabalhos e evolução como desenvolvedor.
-                                Buscando mais espaço na área.
+                            <h3 data-lang="projetos3">Projeto 3</h3>
+                            <strong data-lang="projetos_name3">* Jogo de Forças entre Heróis vs Vilões *</strong>
+                            <p data-lang="projetos_p3">Um jogo breve aonde é possível apontar o nome de 3 heróis e
+                                duelar forças contra 3
+                                vilões, e vencer o melhor!
                             </p>
 
                             <div class="tags">
@@ -297,14 +335,15 @@
                                 <span>CSS 3</span>
                                 <span>JavaScript</span>
                             </div><!--tags-->
-                        </div>
+                        </div><!--projetos_card-->
                     </a>
-                    <a href="https://github.com/WillianRoosa/PortfolioDev" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/WillianRoosa/jogo_desafio" target="_blank" rel="noopener noreferrer">
                         <div class="projetos_card scroll-animation" data-animation="fadeInRight">
-                            <h3>Projeto 4</h3>
-                            <strong>* Desenvolvimento de portfólio *</strong>
-                            <p>Portfólio desenvolvido para divulgação dos meus trabalhos e evolução como desenvolvedor.
-                                Buscando mais espaço na área.
+                            <h3 data-lang="projetos4">Projeto 4</h3>
+                            <strong data-lang="projetos_name4">* Desafio baseado na série round6 *</strong>
+                            <p data-lang="projetos_p4">Um desafio baseado na série round6, aonde é possível escolher a
+                                dificuldade que
+                                deseja encarar e tentar finalizar o desafio sem quebrar o vidro.
                             </p>
 
                             <div class="tags">
@@ -312,29 +351,33 @@
                                 <span>CSS 3</span>
                                 <span>JavaScript</span>
                             </div><!--tags-->
-                        </div>
+                        </div><!--projetos_card-->
                     </a>
-                    <a href="https://github.com/WillianRoosa/PortfolioDev" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/WillianRoosa/sitePessoal" target="_blank" rel="noopener noreferrer">
                         <div class="projetos_card scroll-animation" data-animation="fadeInRight">
-                            <h3>Projeto 5</h3>
-                            <strong>* Desenvolvimento de portfólio *</strong>
-                            <p>Portfólio desenvolvido para divulgação dos meus trabalhos e evolução como desenvolvedor.
-                                Buscando mais espaço na área.
+                            <h3 data-lang="projetos5">Projeto 5</h3>
+                            <strong data-lang="projetos_name5">* Desenvolvimento de site pessoal *</strong>
+                            <p data-lang="projetos_p5">Este site foi desenvolvido para testar meus conhecimentos e gerar
+                                um pequeno desafio na
+                                linguagem PHP, na qual usava em meu estágio como desenvolvedor e suporte técnico.
                             </p>
 
                             <div class="tags">
-                                <span>HTML 5</span>
+                                <span>PHP</span>
                                 <span>CSS 3</span>
                                 <span>JavaScript</span>
                             </div><!--tags-->
-                        </div>
+                        </div><!--projetos_card-->
                     </a>
-                    <a href="https://github.com/WillianRoosa/PortfolioDev" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/WillianRoosa/atividade-extensionista" target="_blank"
+                        rel="noopener noreferrer">
                         <div class="projetos_card scroll-animation" data-animation="fadeInRight">
-                            <h3>Projeto 6</h3>
-                            <strong>* Desenvolvimento de portfólio *</strong>
-                            <p>Portfólio desenvolvido para divulgação dos meus trabalhos e evolução como desenvolvedor.
-                                Buscando mais espaço na área.
+                            <h3 data-lang="projetos6">Projeto 6</h3>
+                            <strong data-lang="projetos_name6">* Desenvolvimento de site de doações *</strong>
+                            <p data-lang="projetos_p6">Este foi meu primeiro site desenvolvido, ainda em faculdade. Foi
+                                um site com o desafio de
+                                criar um sistema de doações, para realizar a atividade extensionista proposta pela
+                                faculdade.
                             </p>
 
                             <div class="tags">
@@ -342,12 +385,65 @@
                                 <span>CSS 3</span>
                                 <span>JavaScript</span>
                             </div><!--tags-->
-                        </div>
+                        </div><!--projetos_card-->
                     </a>
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--projetos-->
+
+        <section class="formulario">
+            <div class="interface">
+                <h2 class="titulo-padrao" data-lang="formulario_titulo">ENTRE EM <span
+                        data-lang="formulario_titulo2">CONTATO.</span></h2>
+                <div class="flex">
+                    <form class="form-contato">
+
+                        <div class="contato_card">
+                            <i class="fa fa-user"> </i>
+                            <input type="text" name="nome" placeholder="Nome" data-lang-placeholder="form_nome"
+                                required>
+                        </div><!--contato_card-->
+
+                        <div class="contato_card">
+                            <i class="fa fa-envelope"> </i>
+                            <input type="email" name="email" placeholder="Email" data-lang-placeholder="form_email"
+                                required>
+                        </div><!--contato_card-->
+
+                        <div class="contato_card">
+                            <i class="fa-brands fa-whatsapp fa-2xl"> </i>
+                            <input type="tel" name="telefone" placeholder="WhatsApp" data-lang-placeholder="form_tel"
+                                inputmode="tel" autocomplete="tel" maxlength="16" required>
+                            <input type="hidden" name="tel" id="telefone_e164">
+                        </div><!--contato_card-->
+
+                        <div class="contato_card textarea">
+                            <i class="fa fa-comment"> </i>
+                            <textarea name="mensagem" placeholder="Mensagem" data-lang-placeholder="form_mensagem"
+                                required></textarea>
+                        </div><!--contato_card-->
+
+                        <div class="btn-enviar">
+                            <input type="submit" data-lang-placeholder="form_enviar" value="ENVIAR">
+                        </div><!--btn-enviar-->
+
+                    </form><!--form-contato-->
+
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--formulario-->
     </main>
+
+    <footer>
+        <div class="interface">
+            <div class="flex">
+                <div class="rodape_card">
+                    <p data-lang="footer">Copyright &copy; 2025 Willian Rosa. Todos os direitos reservados!</p>
+                </div><!--flex-->
+            </div><!--rodape-->
+        </div><!--interface-->
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
