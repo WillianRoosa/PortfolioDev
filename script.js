@@ -260,20 +260,14 @@ function setLanguage(lang) {
       el.placeholder = value;
     }
   });
-}
 
-// LEITURA DO CURRÍCULO EM IDIOMA (pt) ou (en) //
-function setLanguage(lang) {
-  document.querySelectorAll("[data-lang]").forEach((el) => {
-    const key = el.getAttribute("data-lang");
-    el.textContent = translations[lang][key];
-  });
+  // LEITURA DO CURRÍCULO EM IDIOMA (pt) ou (en) //
   document.querySelectorAll("[data-lang-placeholder]").forEach((el) => {
     const key = el.getAttribute("data-lang-placeholder");
     el.placeholder = translations[lang][key];
   });
 
-  // Atualiza botão de currículo
+  // Atualiza botão de currículo //
   const btnCurriculo = document.getElementById("btn-curriculo");
   btnCurriculo.onclick = () => {
     const urlCurriculo =
