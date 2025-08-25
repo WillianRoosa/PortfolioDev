@@ -261,4 +261,118 @@ function setLanguage(lang) {
     }
   });
 }
+
+// LEITURA DO CURRÍCULO EM IDIOMA (pt) ou (en) //
+function setLanguage(lang) {
+  document.querySelectorAll("[data-lang]").forEach((el) => {
+    const key = el.getAttribute("data-lang");
+    el.textContent = translations[lang][key];
+  });
+  document.querySelectorAll("[data-lang-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-lang-placeholder");
+    el.placeholder = translations[lang][key];
+  });
+
+  // Atualiza botão de currículo
+  const btnCurriculo = document.getElementById("btn-curriculo");
+  btnCurriculo.onclick = () => {
+    const urlCurriculo =
+      lang === "pt"
+        ? "documents/curriculo_java.pdf"
+        : "documents/curriculo_java_en.pdf";
+    window.open(urlCurriculo, "_blank");
+  };
+}
+
+//  BOTÕES DE IDIOMA //
+document
+  .getElementById("lang-pt")
+  .addEventListener("click", () => setLanguage("pt"));
+document
+  .getElementById("lang-en")
+  .addEventListener("click", () => setLanguage("en"));
+
+// IDIOMA INICIAL //
 setLanguage("pt");
+
+// MÁSCARA DE TELEFONE (BR) +E.164 //
+const form = document.querySelector("#form-contato");
+const telInput = document.querySelector('input[name="telefone"]');
+const telHidden = document.querySelector("#telefone_e164");
+
+function formatTelBrasil(digitos) {
+  const d = digitos.slice(0, 11); // garante no máx 11 dígitos
+  if (d.length === 0) return "";
+  if (d.length <= 2) return `(${d}`;
+  if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
+  if (d.length <= 10)
+    return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+  return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7, 11)}`;
+}
+
+function formatE164(digitos) {
+  const d = digitos.replace(/\D/g, "");
+  if (d.length === 10 || d.length === 11) {
+    return `+55${d}`;
+  }
+
+  if ((d.startsWith("55") && d.length === 12) || d.length === 13) {
+    return `+${d}`;
+  }
+  return "";
+}
+
+telInput.addEventListener("input", (e) => {
+  const num = e.target.value.replace(/\D/g, "");
+  e.target.value = formatTelBrasil(num);
+  telHidden.value = formatE164(num);
+});
+
+// CONFIGURAÇÃO API BACKEND COM SPRING - ENVIO FORMULÁRIO //
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".form-contato");
+
+  const telInput = form.elements["telefone"];
+  const telHidden = form.elements["telefone_e164"];
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const num = telInput.value.replace(/\D/g, "");
+    const e164 = formatE164(num);
+    if (!e164) {
+      telInput.focus();
+      alert("Digite um número válido (ex: (12) 98888-7777).");
+      return;
+    }
+    telHidden.value = e164;
+
+    const status = document.getElementById("form-status");
+    status.textContent = "Enviando email...";
+
+    const formData = {
+      nome: form.elements["nome"].value,
+      email: form.elements["email"].value,
+      telefone: form.elements["telefone"].value,
+      mensagem: form.elements["mensagem"].value,
+    };
+
+    try {
+      const envio = await fetch("https://springmail-sg2l.onrender.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (envio.ok) {
+        status.textContent = "✅ Mensagem enviada com sucesso!";
+        form.reset();
+        telHidden.value = "";
+      } else {
+        status.textContent = "❌ Falha ao enviar email, tente novamente.";
+      }
+    } catch (err) {
+      status.textContent = "❌ Erro de conexão.";
+    }
+  });
+});
