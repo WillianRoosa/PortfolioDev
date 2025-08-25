@@ -358,11 +358,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const envio = await fetch("https://springmail-sg2l.onrender.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const envio = await fetch(
+        "https://springmail-sg2l.onrender.com/api/email/send",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (envio.ok) {
         status.textContent = "✅ Mensagem enviada com sucesso!";
