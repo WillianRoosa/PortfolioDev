@@ -262,12 +262,6 @@ function setLanguage(lang) {
   });
 
   // LEITURA DO CURRÍCULO EM IDIOMA (pt) ou (en) //
-  document.querySelectorAll("[data-lang-placeholder]").forEach((el) => {
-    const key = el.getAttribute("data-lang-placeholder");
-    el.placeholder = translations[lang][key];
-  });
-
-  // Atualiza botão de currículo //
   const btnCurriculo = document.getElementById("btn-curriculo");
   btnCurriculo.onclick = () => {
     const urlCurriculo =
