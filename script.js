@@ -318,6 +318,7 @@ telInput.addEventListener("input", (e) => {
 
 // CONFIGURAÇÃO API BACKEND COM SPRING - ENVIO FORMULÁRIO //
 document.addEventListener("DOMContentLoaded", () => {
+  setLanguage("pt");
   const form = document.querySelector(".form-contato");
 
   const telInput = form.elements["telefone"];
