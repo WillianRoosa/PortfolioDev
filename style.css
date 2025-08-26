@@ -144,6 +144,7 @@ header .logo a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
     font-size: 22px;
     z-index: 2;
     user-select: none;
@@ -157,23 +158,23 @@ header .logo a:hover {
 }
 
 .btn-lang-switch input#lang-en:checked~.switch-slider {
-    transform: translateX(45px);
+    transform: translateX(40px);
 }
 
 .switch-slider {
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 35px;
+    width: 40px;
     height: 30px;
     background: #4ade80;
-    border-radius: 25px;
+    border-radius: 50px;
     transition: transform 0.3s ease;
     z-index: 1;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* MAIN - FLEX */
+/* MAIN - TELA INICIAL */
 
 section.tela-inicial {
     padding: 40px 4%;
@@ -249,7 +250,7 @@ section.tela-inicial .txt-tela-inicial button:hover {
 
 .tela-inicial .img-tela-inicial img {
     max-width: 350px;
-    border-radius: 50%;
+    border-radius: 25%;
     border: 3px solid #4ade80;
     transition: transform 0.3s ease, box-shadow 0.3 ease;
     box-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
@@ -710,12 +711,10 @@ footer {
     opacity: 1;
 }
 
-/* clique: leve compressão */
 #cursor-effect.click {
     transform: translate(-50%, -50%) scale(0.55);
 }
 
-/* sobre elementos interativos: cresce um pouco */
 #cursor-effect.interactive {
     transform: translate(-50%, -50%) scale(1.1);
     box-shadow: 0 0 16px rgba(74, 222, 128, 0.45);
@@ -775,5 +774,127 @@ footer {
 
     50% {
         transform: scale(1.08);
+    }
+}
+
+/* ======= ANIMAÇÕES ======= */
+.animate-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* AJUSTE PARA MOBILE E TELAS MAIORES */
+
+@media screen and (min-width: 1024px) and (max-width: 1080px) {
+
+    /* Tablets (até 1024px → 2 colunas maiores) */
+    section.especialidades {
+        padding: 40px 6%;
+    }
+
+    .especialidades .box-especialidades {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo-padrao {
+        font-size: 34px;
+    }
+
+    /* HEADER */
+
+    .menu-desktop {
+        display: none;
+    }
+
+    header {
+        padding: 30px 6%;
+        padding-bottom: 30px;
+    }
+
+    .switch-slider {
+        display: flex;
+        order: 1;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    /* MAIN - TELA INICIAL */
+    section.tela-inicial .flex {
+        gap: 40px;
+    }
+
+    section.tela-inicial {
+        padding: 20px 8%;
+    }
+
+    .tela-inicial .txt-tela-inicial h1 {
+        font-size: 10px;
+    }
+
+    .tela-inicial .txt-tela-inicial h2 {
+        margin: 6px 0;
+        font-size: 20px;
+    }
+
+    .tela-inicial .txt-tela-inicial h2 span {
+        font-size: 30px;
+    }
+
+    .tela-inicial .txt-tela-inicial h3 {
+        font-size: 25px;
+        padding: 5px 0;
+    }
+
+    .tela-inicial .txt-tela-inicial p {
+        font-size: 14px;
+    }
+
+    .tela-inicial .img-tela-inicial img {
+        width: 100%;
+        border-radius: 25%;
+        margin-bottom: 50px;
+    }
+
+    section.tela-inicial .txt-tela-inicial button {
+        gap: 6px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 25px;
+        margin: 30px 10px;
+    }
+
+    section.tela-inicial .txt-tela-inicial button img {
+        width: 20px;
+    }
+
+    /* ESPECIALIDADES */
+    section.especialidades {
+        padding: 30px 4%;
+    }
+
+    .especialidades .box-especialidades {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
