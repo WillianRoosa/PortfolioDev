@@ -527,7 +527,6 @@ section.projetos .flex {
 .projetos_card p {
     font-style: italic;
     color: #9da5b4;
-    text-align: justify;
     margin-bottom: 0.5rem;
 }
 
@@ -997,13 +996,36 @@ footer {
     }
 
     .projetos_card h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .projetos_card p {
         font-size: 14px;
         line-height: 1.2;
     }
+
+    .projetos_card h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .projetos_card strong {
+        font-size: 15px;
+        margin-bottom: 0.5rem;
+        line-height: 30px;
+    }
+
+    /* Meu Footer */
+
+    footer {
+        padding: 20px 6%;
+        margin-top: 2%;
+    }
+
+    .rodape_card {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+
 }
 
 /* AJUSTE PARA TABLETS */
