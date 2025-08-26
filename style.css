@@ -797,6 +797,17 @@ footer {
 @media screen and (max-width: 768px) {
 
     /* CLASSES GERAIS */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    a,
+    button {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
     .flex {
         flex-direction: column;
     }
