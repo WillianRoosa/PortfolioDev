@@ -1014,6 +1014,11 @@ footer {
         line-height: 30px;
     }
 
+    /* FORMULÁRIO */
+    section.formulario {
+        padding: 80px 6%;
+    }
+
     /* Meu Footer */
 
     footer {
