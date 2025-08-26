@@ -16,21 +16,25 @@
 </head>
 
 <body>
+    <div id="cursor-effect"></div>
+    <div id="page-loader">
+        <img src="images/logo.png" alt="Logo carregando" id="loader-logo">
+    </div>
     <header>
         <div class="interface">
             <div class="logo">
-                <a href="#">
-                    <img src="images/logo.png" alt="Logo portfólio">
+                <a href="javascript:void(0)" onclick="animateAndReload();">
+                    <img src="images/logo.png" alt="Logo portfólio" id="logo-reload" onclick="animateAndReload()">
                 </a>
             </div><!--logo-->
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#" data-lang="nav_especialidades">Especialidades</a></li>
-                    <li><a href="#" data-lang="nav_sobre">Sobre</a></li>
-                    <li><a href="#" data-lang="nav_experiencia">Experiências</a></li>
-                    <li><a href="#" data-lang="nav_projetos">Projetos</a></li>
-                    <li><a href="#" data-lang="nav_contato">Contato</a></li>
+                    <li><a href="#especialidades" data-lang="nav_especialidades">Especialidades</a></li>
+                    <li><a href="#sobre" data-lang="nav_sobre">Sobre</a></li>
+                    <li><a href="#experiencias" data-lang="nav_experiencia">Experiências</a></li>
+                    <li><a href="#projetos" data-lang="nav_projetos">Projetos</a></li>
+                    <li><a href="#contato" data-lang="nav_contato">Contato</a></li>
                 </ul>
             </nav>
 
@@ -83,7 +87,7 @@
             </div><!--interface-->
         </section><!--tela-inicial-->
 
-        <section class="especialidades">
+        <section class="especialidades" id="especialidades">
             <div class="interface">
                 <h2 class="titulo-padrao" data-lang="especialidades_titulo">MINHAS <span
                         data-lang="especialidades_titulo1">ESPECIALIDADES.</span></h2>
@@ -166,7 +170,7 @@
             </div><!--interface-->
         </section><!--especialidades-->
 
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="interface">
                 <h2 class="titulo-padrao" data-lang="sobre_titulo">QUEM <span data-lang="sobre_titulo2">SOU.</span></h2>
                 <div class="flex">
@@ -223,7 +227,7 @@
             </div><!--interface-->
         </section><!--sobre-->
 
-        <section class="experiencias">
+        <section class="experiencias" id="experiencias">
             <div class="interface">
                 <h2 class="titulo-padrao" data-lang="experiencias_titulo"> EXPERIÊNCIAS <span
                         data-lang="experiencias_titulo2">PROFISSIONAIS.</span></h2>
@@ -285,7 +289,7 @@
             </div><!--interface-->
         </section><!--experiencias_card-->
 
-        <section class="projetos">
+        <section class="projetos" id="projetos">
             <div class="interface">
                 <h2 class="titulo-padrao" data-lang="projetos_titulo">MEUS <span
                         data-lang="projetos_titulo2">PROJETOS.</span></h2>
@@ -391,7 +395,7 @@
             </div><!--interface-->
         </section><!--projetos-->
 
-        <section class="formulario">
+        <section class="formulario" id="contato">
             <div class="interface">
                 <h2 class="titulo-padrao" data-lang="formulario_titulo">ENTRE EM <span
                         data-lang="formulario_titulo2">CONTATO.</span></h2>

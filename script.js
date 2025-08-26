@@ -368,3 +368,87 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// CURSOR EFFECT - EFEITO NO MOUSE //
+const cursor = document.createElement("div");
+cursor.id = "cursor-effect";
+document.body.appendChild(cursor);
+
+let rafId = null;
+
+function setPos(x, y) {
+  cursor.style.left = x + "px";
+  cursor.style.top = y + "px";
+}
+
+// helper: existe um elemento clicável sob o ponteiro?
+const isInteractive = (el) =>
+  !!el.closest(
+    "a, button, [role='button'], input, textarea, select, summary, .interactive"
+  );
+
+// move / ativa só para mouse
+document.addEventListener("pointermove", (e) => {
+  if (e.pointerType !== "mouse") {
+    cursor.classList.remove("visible");
+    return;
+  }
+
+  cursor.classList.add("visible");
+
+  // animação suave (evita “tremidinha”)
+  const { clientX: x, clientY: y } = e;
+  if (!rafId) {
+    rafId = requestAnimationFrame(() => {
+      setPos(x, y);
+      rafId = null;
+    });
+  }
+
+  // estado de “hover” em elementos interativos
+  if (isInteractive(e.target)) {
+    cursor.classList.add("interactive");
+  } else {
+    cursor.classList.remove("interactive");
+  }
+});
+
+// clique: “pulse”
+document.addEventListener("pointerdown", (e) => {
+  if (e.pointerType === "mouse") cursor.classList.add("click");
+});
+document.addEventListener("pointerup", (e) => {
+  if (e.pointerType === "mouse") cursor.classList.remove("click");
+});
+
+// saiu da janela
+document.addEventListener("pointerleave", () => {
+  cursor.classList.remove("visible");
+});
+
+// Efeito ao passar por links ou botões
+document.querySelectorAll("a, button").forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursor.style.width = "20px";
+    cursor.style.height = "20px";
+    cursor.style.background = "rgba(74, 222, 128, 0.1)";
+    cursor.style.boxShadow = "0 0 16px rgba(74, 222, 128, 0.4)";
+  });
+  el.addEventListener("mouseleave", () => {
+    cursor.style.width = "18px";
+    cursor.style.height = "18px";
+    cursor.style.background = "rgba(74, 222, 128, 0.05)";
+    cursor.style.boxShadow = "0 0 8px rgba(74, 222, 128, 0.25)";
+  });
+});
+
+// RELOAD DO INICIO DO HTML //
+function animateAndReload() {
+  const loader = document.getElementById("page-loader");
+  loader.classList.add("active");
+
+  // Aguarda a animação antes de recarregar
+  setTimeout(() => {
+    window.location.href = window.location.pathname;
+  }, 1200); // tempo pra ver a animação
+}
