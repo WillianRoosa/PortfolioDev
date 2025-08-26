@@ -602,7 +602,6 @@ section.formulario {
 form .btn-enviar {
     margin-top: 15px;
     text-align: center;
-    color: #0d1117;
 }
 
 form .btn-enviar input[type=submit] {
@@ -611,6 +610,7 @@ form .btn-enviar input[type=submit] {
     font-size: 16px;
     font-weight: 500;
     background-color: #4ade80e8;
+    color: #0d1117;
     border: 0;
     border-radius: 8px;
     cursor: pointer;
