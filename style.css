@@ -338,8 +338,8 @@ section.sobre h2.titulo-padrao {
 }
 
 section.sobre .img-sobre img {
-    width: 300px;
-    height: 450px;
+    width: 350px;
+    height: 500px;
     border: 3px solid #4ade80;
     border-radius: 12%;
     object-fit: cover;
@@ -471,7 +471,7 @@ section.experiencias .flex {
 
 /* MEUS PROJETOS */
 
-section.projeto {
+section.projetos {
     padding: 70px 4%;
 }
 
@@ -791,22 +791,9 @@ footer {
     }
 }
 
-/* AJUSTE PARA MOBILE E TELAS MAIORES */
+/* AJUSTE PARA MOBILE */
 
-@media screen and (min-width: 1024px) and (max-width: 1080px) {
-
-    /* Tablets (até 1024px → 2 colunas maiores) */
-    section.especialidades {
-        padding: 40px 6%;
-    }
-
-    .especialidades .box-especialidades {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width: 700px) {
+@media screen and (max-width: 768px) {
 
     /* CLASSES GERAIS */
     .flex {
@@ -896,5 +883,170 @@ footer {
     .especialidades .box-especialidades {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+
+    /* SOBRE */
+    section.sobre {
+        padding: 70px 8%;
+    }
+
+    section.sobre .img-sobre img {
+        width: 350px;
+        height: 450px;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+
+    .sobre .txt-sobre strong {
+        font-size: 20px;
+    }
+
+    .sobre .txt-sobre p {
+        margin: 14px 0;
+    }
+
+    .sobre .txt-sobre h4 {
+        font-size: 14px;
+    }
+
+    /* EXPERIÊNCIAS */
+    section.projetos {
+        padding: 70px 8%;
+    }
+
+    section.experiencias .flex {
+        padding: 1rem;
+        gap: 40px;
+    }
+
+    .experiencias_card {
+        flex: 1 1 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        border-left: 4px solid #22c55e;
+        min-height: auto;
+        transform: none;
+    }
+
+    .experiencias_card:hover {
+        transform: translate(5px);
+        border-left: 4px solid #22c55e;
+        box-shadow: 6px 8px 10px rgba(74, 222, 128, 0.3);
+    }
+
+    .experiencias_card h3 {
+        font-size: 18px;
+    }
+
+    .experiencias_card strong {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .experiencias_card p,
+    .experiencias_card ul li {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* PROJETOS */
+
+    section.projetos .flex {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .projetos a {
+        flex: 1 1 90%;
+        /* ocupa 90% da largura */
+        max-width: 90%;
+        margin: 0 auto;
+        /* centraliza o card */
+        transform: none;
+        /* remove o deslize */
+    }
+
+    .projetos_card {
+        min-height: auto;
+        /* altura flexível */
+        padding: 1rem;
+        /* menos espaçamento interno */
+        transform: none;
+    }
+
+    .projetos_card:hover {
+        transform: translateY(-8px);
+        box-shadow: 6px 8px 5px rgba(74, 222, 128, 0.2);
+    }
+
+    .projetos_card h3 {
+        font-size: 18px;
+    }
+
+    .projetos_card p {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+/* AJUSTE PARA TABLETS */
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+
+    /* ESPECIALIDADES */
+    /* Tablets (até 1024px → 2 colunas maiores) */
+    section.especialidades {
+        padding: 40px 6%;
+    }
+
+    .especialidades .box-especialidades {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+
+    /* EXPERIÊNCIAS */
+
+    .projetos a {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+
+    section.projetos .flex {
+        padding: 40px;
+        gap: 30px;
+    }
+}
+
+
+/* MONITORES E TELAS MAIORES */
+@media screen and (min-width: 1600px) {
+
+    /* ESPECIALIDADES */
+    section.especialidades {
+        max-width: 1400px;
+        /* evita esticar demais */
+        margin: 0 auto;
+        /* centraliza conteúdo */
+    }
+
+    section.especialidades .card {
+        width: 30%;
+        /* distribui melhor */
+    }
+
+    /* EXPERIÊNCIAS */
+    section.projetos {
+        max-width: 1400px;
+        /* limita largura */
+        margin: 0 auto;
+    }
+
+    .projetos a {
+        flex: 1 1 calc(33% - 40px);
+        /* três cards por linha */
+        max-width: calc(33% - 40px);
     }
 }
