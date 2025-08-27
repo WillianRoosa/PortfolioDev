@@ -485,18 +485,17 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 // BOTÃO MENU MOBILE //
-const menuMobile = document.getElementById("menu-mobile");
-const toggleBtn = document.getElementById("btn-menu-mobile");
+const btn = document.querySelector(".btn-menu-mobile");
+const menu = document.querySelector(".menu-mobile");
+const iconOpen = document.getElementById("icon-open");
+const iconClose = document.getElementById("icon-close");
 
-// Alterna entre abrir e fechar o menu
-toggleBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  menuMobile.classList.toggle("active");
-});
-
-// Fecha o menu ao clicar em qualquer link dentro dele
-document.querySelectorAll(".menu-mobile nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menuMobile.classList.remove("active");
-  });
+btn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  iconOpen.style.display = menu.classList.contains("active")
+    ? "none"
+    : "inline";
+  iconClose.style.display = menu.classList.contains("active")
+    ? "inline"
+    : "none";
 });
