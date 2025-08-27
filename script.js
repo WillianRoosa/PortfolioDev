@@ -4,7 +4,7 @@ const translations = {
     // HEADER //
     nav_especialidades: "Especialidades",
     nav_sobre: "Sobre",
-    nav_experiencia: "Experiência",
+    nav_experiencia: "Experiências",
     nav_projetos: "Projetos",
     nav_contato: "Contatos",
 
@@ -63,15 +63,15 @@ const translations = {
     experiencias_empresa2:
       "Ultra Seven Informática | Jan 2024 - Jun 2024 | Remoto",
     experiencias_p6:
-      "Auxílio no desenvolvimento de tasks e melhorias, correção de bugs.",
+      "Participação na correção de bugs e ajustes em funcionalidades existentes do ERP.",
     experiencias_p7:
-      "Suporte técnico com clientes, visão analítica sobre melhorias no software.",
+      "Documentação de processos internos e fluxos do sistema para melhoria contínua.",
     experiencias_p8:
-      "Contribuição nas sprints para melhorias e funcionamento no desempenho e validação do sistema ERP.",
+      "Colaboração e alinhamentos com a equipe de desenvolvedores na implementação de novas features.",
     experiencias_p9:
-      "Integração iPaaS, Microsoft Azure, ERP com IA, Validação de NF's e NFC.",
+      "IRealização de testes funcionais garantindo a qualidade das entregas.",
     experiencias_p10:
-      "Alinhamento semanal de tasks no Asana e reuniões com clientes.",
+      "Apoio na integração de APIs externas e análise de desempenho do sistema.",
 
     // MAIN - PROJETOS //
     projetos_titulo: "MEUS ",
@@ -452,3 +452,56 @@ function animateAndReload() {
     window.location.href = window.location.pathname;
   }, 1200); // tempo pra ver a animação
 }
+
+// BOTÃO PARA HOME DO SITE //
+const btnHome = document.querySelector(".btn-home");
+if (btnHome) {
+  window.addEventListener("scroll", () => {
+    btnHome.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+}
+
+// SCROLL DA PÁGINA //
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href").substring(1);
+    const section = document.getElementById(targetId);
+
+    if (section) {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      const scrollTo = sectionTop - (windowHeight - sectionHeight) / 7;
+
+      window.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
+// BOTÃO MENU MOBILE //
+const btnAbrir = document.getElementById("btn-menu-mobile");
+const menuMobile = document.getElementById("menu-mobile");
+const btnFechar = document.querySelector(".btn-fechar");
+
+btnAbrir.addEventListener("click", (e) => {
+  e.preventDefault(); // evita que o link recarregue a página
+  menuMobile.classList.add("active");
+});
+
+btnFechar.addEventListener("click", (e) => {
+  e.preventDefault();
+  menuMobile.classList.remove("active");
+});
+
+// Fecha o menu ao clicar em qualquer link dentro dele
+document.querySelectorAll(".menu-mobile nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    menuMobile.classList.remove("active");
+  });
+});

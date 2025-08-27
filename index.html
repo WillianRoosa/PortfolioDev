@@ -15,7 +15,7 @@
     <title>Willian Rosa - Developer</title>
 </head>
 
-<body>
+<body id="home">
     <div id="cursor-effect"></div>
     <div id="page-loader">
         <img src="images/logo.png" alt="Logo carregando" id="loader-logo">
@@ -47,6 +47,30 @@
 
                 <div class="switch-slider"></div><!--switch-slider-->
             </div><!--btn-lang-switch-->
+
+            <div class="btn-menu-mobile" id="btn-menu-mobile">
+                <a href="#">
+                    <img src="icons/menu-mobile.svg" alt="menu-mobile" width="30">
+                </a>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <a href="#">
+                        <img src="icons/fechar-mobile.svg" width="30">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#especialidades" data-lang="nav_especialidades">Especialidades</a></li>
+                        <li><a href="#sobre" data-lang="nav_sobre">Sobre</a></li>
+                        <li><a href="#experiencias" data-lang="nav_experiencia">Experiências</a></li>
+                        <li><a href="#projetos" data-lang="nav_projetos">Projetos</a></li>
+                        <li><a href="#contato" data-lang="nav_contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div><!--menu-mobile-->
+
         </div> <!--interface-->
     </header>
 
@@ -281,7 +305,7 @@
                             <span>Java</span>
                             <span>Spring Boot</span>
                             <span>MySQL</span>
-                            <span>AWS Cloud</span>
+                            <span>JavaScript</span>
                         </div><!--tags-->
                     </div><!--experiencias_card-->
 
@@ -447,7 +471,14 @@
             </div><!--rodape-->
         </div><!--interface-->
     </footer>
+
     <p id="form-status"></p>
+    <a href="#home" class="btn-home" aria-label="Início">
+        <svg class="icon-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor">
+            <path
+                d="M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z" />
+        </svg>
+    </a>
     <script src="script.js"></script>
 </body>
 
