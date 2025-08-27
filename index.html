@@ -20,7 +20,7 @@
     <div id="page-loader">
         <img src="images/logo.png" alt="Logo carregando" id="loader-logo">
     </div>
-    <header>
+    <header id="header">
         <div class="interface">
             <div class="logo">
                 <a href="javascript:void(0)" onclick="animateAndReload();">
@@ -49,17 +49,11 @@
             </div><!--btn-lang-switch-->
 
             <div class="btn-menu-mobile" id="btn-menu-mobile">
-                <a href="#">
-                    <img src="icons/menu-mobile.svg" alt="menu-mobile" width="30">
-                </a>
+                <img src="icons/menu-mobile.svg" alt="menu-mobile" id="icon-open" width="30">
+                <img src="icons/fechar-mobile.svg" alt="fechar-mobile" id="icon-close" width="30">
             </div>
 
             <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
-                    <a href="#">
-                        <img src="icons/fechar-mobile.svg" width="30">
-                    </a>
-                </div>
                 <nav>
                     <ul>
                         <li><a href="#especialidades" data-lang="nav_especialidades">Especialidades</a></li>
