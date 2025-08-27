@@ -922,11 +922,6 @@ footer {
         text-align: center;
     }
 
-    .btn-menu-mobile img {
-        filter: invert(73%) sepia(48%) saturate(541%) hue-rotate(85deg) brightness(93%) contrast(94%);
-        transition: opacity 0.3s ease;
-    }
-
     #icon-close {
         display: none;
     }
