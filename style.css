@@ -916,24 +916,12 @@ footer {
         text-align: center;
     }
 
-    .menu-mobile nav ul li a {
-        color: #e6edf3;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-    }
-
-    .menu-mobile nav ul li a:hover {
-        color: #4ade80;
-    }
-
-    .menu-mobile a:hover {
+    .menu-mobile ul li a:hover {
         color: #4ade80;
         transform: scale(1.08);
     }
 
-    .menu-mobile a::after {
+    .menu-mobile ul li a::after {
         content: '';
         position: absolute;
         left: 0;
@@ -946,7 +934,7 @@ footer {
         transition: transform 0.3s ease-out;
     }
 
-    .menu-mobile a:hover::after {
+    .menu-mobile ul li a:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
     }
@@ -967,8 +955,11 @@ footer {
     }
 
     .logo img {
-        width: 80px;
-        height: auto;
+        width: 70px;
+    }
+
+    .btn-lang-switch {
+        margin-left: -25px;
     }
 
     /* MAIN - TELA INICIAL */
