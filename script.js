@@ -270,6 +270,19 @@ function setLanguage(lang) {
         : "documents/curriculo_java_en.pdf";
     window.open(urlCurriculo, "_blank");
   };
+
+  // MENSAGEM DO WHATSAPP EM IDIOMA //
+  const btnContato = document.getElementById("btn-contato");
+  const mensagem =
+    lang === "pt"
+      ? "Olá Willian! Vi seu portfólio e fiquei muito interessado no seu trabalho. Gostaria de entrar em contato para conversar melhor."
+      : "Hello Willian! I saw your portfolio and I'm very interested in your work. I'd like to get in touch to talk more.";
+
+  const urlWhatsapp = `https://wa.me/5512996438207?text=${encodeURIComponent(
+    mensagem
+  )}`;
+  btnContato.onclick = () =>
+    window.open(urlWhatsapp, "_blank", "noopener noreferrer");
 }
 
 //  BOTÕES DE IDIOMA //
