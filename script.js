@@ -483,11 +483,11 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const section = document.getElementById(targetId);
 
     if (section) {
+      const headerHeight = document.querySelector("header").offsetHeight;
+      const extraOffset = window.innerHeight * 0.08;
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const windowHeight = window.innerHeight;
 
-      const scrollTo = sectionTop - (windowHeight - sectionHeight) / 7;
+      const scrollTo = sectionTop - headerHeight + extraOffset;
 
       window.scrollTo({
         top: scrollTo,
@@ -502,13 +502,22 @@ const btn = document.querySelector(".btn-menu-mobile");
 const menu = document.querySelector(".menu-mobile");
 const iconOpen = document.getElementById("icon-open");
 const iconClose = document.getElementById("icon-close");
+const menuLinks = document.querySelectorAll(".menu-mobile a");
 
+// Abrir/fechar menu ao clicar no botão
 btn.addEventListener("click", () => {
   menu.classList.toggle("active");
-  iconOpen.style.display = menu.classList.contains("active")
-    ? "none"
-    : "inline";
-  iconClose.style.display = menu.classList.contains("active")
-    ? "inline"
-    : "none";
+
+  const isActive = menu.classList.contains("active");
+  iconOpen.style.display = isActive ? "none" : "inline";
+  iconClose.style.display = isActive ? "inline" : "none";
+});
+
+// Fechar menu ao clicar em qualquer link
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    iconOpen.style.display = "inline";
+    iconClose.style.display = "none";
+  });
 });
