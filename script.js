@@ -46,32 +46,46 @@ const translations = {
     // MAIN - EXPERIÊNCIAS //
     experiencias_titulo: "EXPERIÊNCIAS ",
     experiencias_titulo2: "PROFISSIONAIS.",
-    experiencias_intro: "Estágio de Desenvolvedor e Suporte Técnico",
-    experiencias_empresa: "Care - Business | Jun 2024 - Jan 2025 | Remoto",
+    experiencias_intro1: "Desenvolvedor Júnior de sistema ERP",
+    experiencias_empresa1:
+      "Ultra Seven Informática | Mar 2025 - Ago 2025 | Remoto",
     experiencias_p1:
-      "Auxílio no desenvolvimento de tasks e melhorias, correção de bugs.",
+      "Desenvolvimento de APIs REST para integração entre sistemas internos e externos.",
     experiencias_p2:
-      "Suporte técnico com clientes, visão analítica sobre melhorias no software.",
+      "Criação e otimização de consultas em bancos de dados relacionais para garantir eficiência no processamento de dados.",
     experiencias_p3:
-      "Contribuição nas sprints para melhorias e funcionamento no desempenho e validação do sistema ERP.",
+      "Implementação de regras de negócio e manutenção de funcionalidades existentes em aplicações corporativas.",
     experiencias_p4:
-      "Integração iPaaS, Microsoft Azure, ERP com IA, Validação de NF's e NFC.",
+      "Apoio na implantação e monitoramento de aplicações em ambiente de computação em nuvem.",
     experiencias_p5:
-      "Alinhamento semanal de tasks no Asana e reuniões com clientes.",
-    experiencias_intro2:
-      "Estágio de Suporte para Desenvolvimento de sistema ERP",
-    experiencias_empresa2:
-      "Ultra Seven Informática | Jan 2024 - Jun 2024 | Remoto",
+      "Utilização de Git para versionamento de código e colaboração em equipe seguindo metodologias ágeis.",
+
+    experiencias_intro2: "Estágio de Desenvolvedor e Suporte Técnico",
+    experiencias_empresa2: "Care - Business | Jun 2024 - Jan 2025 | Remoto",
     experiencias_p6:
-      "Participação na correção de bugs e ajustes em funcionalidades existentes do ERP.",
+      "Auxílio no desenvolvimento de tasks e melhorias, correção de bugs.",
     experiencias_p7:
-      "Documentação de processos internos e fluxos do sistema para melhoria contínua.",
+      "Suporte técnico com clientes, visão analítica sobre melhorias no software.",
     experiencias_p8:
-      "Colaboração e alinhamentos com a equipe de desenvolvedores na implementação de novas features.",
+      "Contribuição nas sprints para melhorias e funcionamento no desempenho e validação do sistema ERP.",
     experiencias_p9:
-      "IRealização de testes funcionais garantindo a qualidade das entregas.",
+      "Integração iPaaS, Microsoft Azure, ERP com IA, Validação de NF's e NFC.",
     experiencias_p10:
-      "Apoio na integração de APIs externas e análise de desempenho do sistema.",
+      "Alinhamento semanal de tasks no Asana e reuniões com clientes.",
+
+    experiencias_intro3: "Aprendiz de desenvolvedor de sistemas",
+    experiencias_empresa3:
+      "Ultra Seven Informática | Mai 2023 - Jun 2024 | Remoto",
+    experiencias_p11:
+      "Auxílio no consumo de APIs REST para integração de sistemas.",
+    experiencias_p12:
+      "Suporte em consultas e manipulação de dados em banco de dados relacionais.",
+    experiencias_p13:
+      "Participação em tarefas de versionamento e controle de código utilizando Git.",
+    experiencias_p14:
+      "Apoio em atividades de deploy e noções práticas de computação em nuvem.",
+    experiencias_p15:
+      "Colaboração em rotinas da equipe de tecnologia, garantindo organização e fluxo de trabalho",
 
     // MAIN - PROJETOS //
     projetos_titulo: "MEUS ",
@@ -164,32 +178,45 @@ const translations = {
     // MAIN - EXPERIÊNCIAS //
     experiencias_titulo: "PROFESSIONAL ",
     experiencias_titulo2: "EXPERIENCES.",
-    experiencias_intro: "Internship as Developer and Technical Support",
-    experiencias_empresa: "Care - Business | Jun 2024 - Jan 2025 | Remote",
+    experiencias_intro1: "Junior ERP Systems Developer",
+    experiencias_empresa1:
+      "Ultra Seven Informática | Mar 2025 - Ago 2025 | Remote",
     experiencias_p1:
-      "Assistance in the development of tasks and improvements, bug fixing.",
+      "Development of REST APIs for integration between internal and external systems.",
     experiencias_p2:
-      "Technical support with clients, providing analytical insights for software improvements.",
+      "Implementation of business rules and maintenance of existing functionalities in corporate applications.",
     experiencias_p3:
-      "Contribution to sprints for performance improvements and ERP system validation.",
+      "Creation and optimization of queries in relational databases to ensure efficient data processing.",
     experiencias_p4:
-      "Integration with iPaaS, Microsoft Azure, ERP with AI, validation of invoices (NF’s and NFC).",
+      "Support in the deployment and monitoring of applications in cloud computing environments.",
     experiencias_p5:
+      "Use of Git for code versioning and team collaboration following agile methodologies.",
+
+    experiencias_intro2: "Internship as Developer and Technical Support",
+    experiencias_empresa2: "Care - Business | Jun 2024 - Jan 2025 | Remote",
+    experiencias_p6:
+      "Assistance in the development of tasks and improvements, bug fixing.",
+    experiencias_p7:
+      "Technical support with clients, providing analytical insights for software improvements.",
+    experiencias_p8:
+      "Contribution to sprints for performance improvements and ERP system validation.",
+    experiencias_p9:
+      "Integration with iPaaS, Microsoft Azure, ERP with AI, validation of invoices (NF’s and NFC).",
+    experiencias_p10:
       "Weekly task alignment in Asana and meetings with clients.",
 
-    experiencias_intro2: "Internship in ERP System Development Support",
-    experiencias_empresa2:
-      "Ultra Seven Informática | Jan 2024 - Jun 2024 | Remote",
-    experiencias_p6:
-      "Participation in bug fixing and adjustments to existing ERP features.",
-    experiencias_p7:
-      "Documentation of internal processes and system workflows for continuous improvement.",
-    experiencias_p8:
-      "Collaboration with the development team in implementing new features.",
-    experiencias_p9:
-      "Execution of functional tests ensuring quality of deliveries.",
-    experiencias_p10:
-      "Support in the integration of external APIs and performance analysis of the system.",
+    experiencias_intro3: "Systems Development Trainee",
+    experiencias_empresa3:
+      "Ultra Seven Informática | Mai 2023 - Jun 2024 | Remote",
+    experiencias_p11: "Assisted in consuming REST APIs for system integration.",
+    experiencias_p12:
+      "Provided support in queries and data manipulation in relational databases.",
+    experiencias_p13:
+      "Participated in code versioning and source control using Git.",
+    experiencias_p14:
+      "Supported deployment activities and gained practical knowledge in cloud computing.",
+    experiencias_p15:
+      "Collaborated in IT team routines, ensuring organization and workflow efficiency.",
 
     // MAIN - PROJETOS //
     projetos_titulo: "MY ",
