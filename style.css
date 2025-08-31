@@ -1184,38 +1184,6 @@ footer {
         width: 20px;
         height: 20px;
     }
-
-    .menu-mobile {
-        overflow-y: auto;
-        scrollbar-width: thin;
-        /* Firefox */
-        scrollbar-color: var(--color-3) var(--color-4);
-        /* Firefox */
-    }
-
-    /* Chrome, Edge, etc. */
-    .menu-mobile::-webkit-scrollbar {
-        width: 5px;
-        background: var(--color-4);
-    }
-
-    .menu-mobile::-webkit-scrollbar-track {
-        background-color: var(--color-4);
-    }
-
-    .menu-mobile::-webkit-scrollbar-thumb {
-        background: var(--color-3);
-        border-radius: 10px;
-    }
-
-    .menu-mobile::-webkit-scrollbar-corner {
-        background: var(--color-3);
-    }
-
-    .menu-mobile ::selection {
-        background: #4ade80;
-        color: #0d1117;
-    }
 }
 
 /* AJUSTE PARA TABLETS */
