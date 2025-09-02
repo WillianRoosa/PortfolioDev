@@ -1060,7 +1060,7 @@ footer {
 
     section.sobre .img-sobre img {
         width: 350px;
-        height: 450px;
+        height: 330px;
     }
 
     .sobre .txt-sobre h2 {
@@ -1120,6 +1120,10 @@ footer {
     .experiencias_card ul li {
         font-size: 14px;
         line-height: 1.4;
+    }
+
+    .tags {
+        padding: 10px;
     }
 
     /* PROJETOS */
