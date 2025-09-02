@@ -425,7 +425,8 @@ section.experiencias {
 }
 
 section.experiencias .flex {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     flex-wrap: wrap;
     justify-content: center;
     text-align: justify;
@@ -440,16 +441,17 @@ section.experiencias .flex {
     border-left: 4px solid #4ade80;
     transition: transform 0.3s ease, border-left 0.3s ease, box-shadow 0.9s ease;
     box-shadow: 4px 5px 2px rgba(74, 222, 128, 0.2);
-    min-height: 330px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    overflow: hidden;
 }
 
 .experiencias_card:hover {
     transform: translateX(15px);
     box-shadow: 0 12px 200px rgba(0, 0, 0, 0.3);
-    border-left: 9px solid #22c55e;
+    border-left: 10px solid #22c55e;
     box-shadow: 8px 2px 20px rgba(74, 222, 128, 0.326);
 }
 
@@ -457,6 +459,7 @@ section.experiencias .flex {
     font-style: italic;
     color: #4ade80;
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .experiencias_card strong {
