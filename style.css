@@ -1165,6 +1165,10 @@ footer {
         margin-bottom: 0.5rem;
     }
 
+    .projetos .tags {
+        padding: 5px;
+    }
+
     .projetos_card strong {
         font-size: 15px;
         margin-bottom: 0.5rem;
@@ -1199,7 +1203,6 @@ footer {
 @media screen and (min-width: 769px) and (max-width: 1400px) {
 
     /* ESPECIALIDADES */
-    /* Tablets (até 1024px → 2 colunas maiores) */
     section.especialidades {
         padding: 40px 6%;
     }
@@ -1250,5 +1253,10 @@ footer {
         flex: 1 1 calc(33% - 40px);
         /* três cards por linha */
         max-width: calc(33% - 40px);
+    }
+
+    /* PROJETOS */
+    .projetos_card {
+        min-height: 410px;
     }
 }
