@@ -861,7 +861,7 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-    /* CLASSES GERAIS */
+    /* CLASSES GERAIS - MOBILE */
     html {
         -webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: transparent;
@@ -885,7 +885,7 @@ footer {
         font-size: 34px;
     }
 
-    /* HEADER */
+    /* HEADER  - MOBILE */
 
     .menu-desktop {
         display: none;
@@ -989,7 +989,7 @@ footer {
         margin-left: -25px;
     }
 
-    /* MAIN - TELA INICIAL */
+    /* MAIN - TELA INICIAL - MOBILE */
     section.tela-inicial .flex {
         gap: 40px;
     }
@@ -1039,7 +1039,7 @@ footer {
         width: 20px;
     }
 
-    /* ESPECIALIDADES */
+    /* ESPECIALIDADES - MOBILE */
     section.especialidades {
         padding: 30px 4%;
     }
@@ -1049,7 +1049,7 @@ footer {
         max-width: 100%;
     }
 
-    /* SOBRE */
+    /* SOBRE - MOBILE */
     section.sobre {
         padding: 70px 8%;
     }
@@ -1081,7 +1081,7 @@ footer {
         font-size: 14px;
     }
 
-    /* EXPERIÊNCIAS */
+    /* EXPERIÊNCIAS - MOBILE */
     section.projetos {
         padding: 70px 8%;
     }
@@ -1126,7 +1126,7 @@ footer {
         padding: 10px;
     }
 
-    /* PROJETOS */
+    /* PROJETOS - MOBILE */
 
     section.projetos .flex {
         padding: 20px;
@@ -1175,12 +1175,12 @@ footer {
         line-height: 30px;
     }
 
-    /* FORMULÁRIO */
+    /* FORMULÁRIO - MOBILE */
     section.formulario {
         padding: 80px 6%;
     }
 
-    /* Meu Footer */
+    /* Meu Footer - MOBILE */
 
     footer {
         padding: 20px 6%;
@@ -1201,6 +1201,45 @@ footer {
 
 /* AJUSTE PARA TABLETS */
 @media screen and (min-width: 769px) and (max-width: 1400px) {
+
+    /* HEADER - TABLETS */
+    header {
+        padding: 30px 6%;
+        padding-bottom: 80px;
+    }
+
+    header>.interface {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    header .logo img {
+        width: 80px;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding: 0;
+    }
+
+    header nav ul li {
+        padding: 0;
+    }
+
+    header .menu-desktop a {
+        font-size: 15px;
+    }
+
+    header,
+    header .interface,
+    header nav ul {
+        transition: all 0.3s ease;
+    }
 
     /* ESPECIALIDADES */
     section.especialidades {
