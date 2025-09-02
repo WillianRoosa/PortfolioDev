@@ -1087,8 +1087,9 @@ footer {
     }
 
     section.experiencias .flex {
-        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 40px;
+        padding: 1rem;
     }
 
     .experiencias_card {
@@ -1126,6 +1127,7 @@ footer {
     section.projetos .flex {
         padding: 20px;
         gap: 20px;
+        display: flex;
     }
 
     .projetos a {
