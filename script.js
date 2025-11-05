@@ -377,7 +377,8 @@ document.addEventListener("DOMContentLoaded", () => {
     telHidden.value = e164;
 
     const status = document.getElementById("form-status");
-    status.textContent = "Enviando email...";
+    status.textContent = "⌛ Enviando email...";
+    status.classList.add("loading-message");
 
     const formData = {
       nome: form.elements["nome"].value,
@@ -395,6 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
           body: JSON.stringify(formData),
         }
       );
+      status.classList.remove("loading-message");
 
       if (envio.ok) {
         status.textContent = "✅ Mensagem enviada com sucesso!";
