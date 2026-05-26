@@ -389,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             const envio = await fetch(
-                "https://springmail-sg2l.onrender.com/api/email/send",
+                "https://springmail-production-1549.up.railway.app/api/email/send",
                 {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
